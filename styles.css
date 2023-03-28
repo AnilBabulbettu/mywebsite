@@ -1,0 +1,22 @@
+:root {
+  --content-font: '[choosen font in the link tag]', sans-serif;
+}
+  
+body {
+ font-family: var(--content-font);
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: 1fr min(80ch, calc(100% - 16px)) 1fr;
+  grid-column-gap: 8px;
+  place-items: center;
+}
+
+.parent > * {
+  grid-column: 2;
+}
+
+h1 {
+  color: red;
+}
